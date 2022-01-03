@@ -111,6 +111,112 @@ static int USKeyCodes[] = {
     XK_space,             49,      /* Space */
 };
 
+static int JPKeyCodes[] = {
+    /* The alphabet */
+    XK_A,                  0,      /* A */
+    XK_B,                 11,      /* B */
+    XK_C,                  8,      /* C */
+    XK_D,                  2,      /* D */
+    XK_E,                 14,      /* E */
+    XK_F,                  3,      /* F */
+    XK_G,                  5,      /* G */
+    XK_H,                  4,      /* H */
+    XK_I,                 34,      /* I */
+    XK_J,                 38,      /* J */
+    XK_K,                 40,      /* K */
+    XK_L,                 37,      /* L */
+    XK_M,                 46,      /* M */
+    XK_N,                 45,      /* N */
+    XK_O,                 31,      /* O */
+    XK_P,                 35,      /* P */
+    XK_Q,                 12,      /* Q */
+    XK_R,                 15,      /* R */
+    XK_S,                  1,      /* S */
+    XK_T,                 17,      /* T */
+    XK_U,                 32,      /* U */
+    XK_V,                  9,      /* V */
+    XK_W,                 13,      /* W */
+    XK_X,                  7,      /* X */
+    XK_Y,                 16,      /* Y */
+    XK_Z,                  6,      /* Z */
+    XK_a,                  0,      /* a */
+    XK_b,                 11,      /* b */
+    XK_c,                  8,      /* c */
+    XK_d,                  2,      /* d */
+    XK_e,                 14,      /* e */
+    XK_f,                  3,      /* f */
+    XK_g,                  5,      /* g */
+    XK_h,                  4,      /* h */
+    XK_i,                 34,      /* i */
+    XK_j,                 38,      /* j */
+    XK_k,                 40,      /* k */
+    XK_l,                 37,      /* l */
+    XK_m,                 46,      /* m */
+    XK_n,                 45,      /* n */
+    XK_o,                 31,      /* o */
+    XK_p,                 35,      /* p */
+    XK_q,                 12,      /* q */
+    XK_r,                 15,      /* r */
+    XK_s,                  1,      /* s */
+    XK_t,                 17,      /* t */
+    XK_u,                 32,      /* u */
+    XK_v,                  9,      /* v */
+    XK_w,                 13,      /* w */
+    XK_x,                  7,      /* x */
+    XK_y,                 16,      /* y */
+    XK_z,                  6,      /* z */
+
+    /* Numbers */
+    XK_0,                 29,      /* 0 */
+    XK_1,                 18,      /* 1 */
+    XK_2,                 19,      /* 2 */
+    XK_3,                 20,      /* 3 */
+    XK_4,                 21,      /* 4 */
+    XK_5,                 23,      /* 5 */
+    XK_6,                 22,      /* 6 */
+    XK_7,                 26,      /* 7 */
+    XK_8,                 28,      /* 8 */
+    XK_9,                 25,      /* 9 */
+
+    /* Symbols */
+    XK_exclam,            18,      /* ! */
+    XK_at,                33,      /* @ */
+    XK_numbersign,        20,      /* # */
+    XK_dollar,            21,      /* $ */
+    XK_percent,           23,      /* % */
+    XK_asciicircum,       24,      /* ^ */
+    XK_ampersand,         22,      /* & */
+    XK_asterisk,          39,      /* * */
+    XK_parenleft,         28,      /* ( */
+    XK_parenright,        25,      /* ) */
+    XK_minus,             27,      /* - */
+    XK_underscore,        94,      /* _ */
+    XK_equal,             27,      /* = */
+    XK_plus,              41,      /* + */
+    XK_grave,             33,      /* ` */  /* XXX ? */
+    XK_asciitilde,        24,      /* ~ */
+    XK_bracketleft,       30,      /* [ */
+    XK_braceleft,         30,      /* { */
+    XK_bracketright,      42,      /* ] */
+    XK_braceright,        42,      /* } */
+    XK_semicolon,         41,      /* ; */
+    XK_colon,             39,      /* : */
+    XK_apostrophe,        26,      /* ' */
+    XK_quotedbl,          19,      /* " */
+    XK_comma,             43,      /* , */
+    XK_less,              43,      /* < */
+    XK_period,            47,      /* . */
+    XK_greater,           47,      /* > */
+    XK_slash,             44,      /* / */
+    XK_question,          44,      /* ? */
+    XK_backslash,         93,      /* \ */
+    XK_yen,          93,       /* \ */
+    XK_bar,               93,      /* | */
+    // OS X Sends this (END OF MEDIUM) for Shift-Tab (with US Keyboard)
+    0x0019,               48,      /* Tab */
+    XK_space,             49,      /* Space */
+};
+
 static int SpecialKeyCodes[] = {
     /* "Special" keys */
     XK_Return,            36,      /* Return */
@@ -187,4 +293,8 @@ static int SpecialKeyCodes[] = {
     XK_Control_L,         59,      /* Ctrl Left */
     XK_Control_R,         59,      /* Ctrl Right */
 };
+
+// TODO: make this loadable from config file
+//#define KeyCodes USKeyCodes
+#define KeyCodes JPKeyCodes
 

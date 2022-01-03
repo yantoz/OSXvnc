@@ -71,11 +71,9 @@ static int unicodeNumbersToKeyCodes[16] = { 29, 18, 19, 20, 21, 23, 22, 26, 28, 
         keyTableMods[i] = 0;
     }
 
-    // This is the old US only keyboard mapping
-    // Map the above key table into a static array so we can just look them up directly
-    // NSLog(@"Unable To determine key map - Reverting to US mapping");
-    for (i = 0; i < (sizeof(USKeyCodes) / sizeof(int)); i += 2)
-        keyTable[(unsigned short)USKeyCodes[i]] = (CGKeyCode) USKeyCodes[i+1];
+    // Map the key table into a static array so we can just look them up directly
+    for (i = 0; i < (sizeof(KeyCodes) / sizeof(int)); i += 2)
+        keyTable[(unsigned short)KeyCodes[i]] = (CGKeyCode) KeyCodes[i+1];
 
     // This is the old SpecialKeyCodes keyboard mapping
     // Map the above key table into a static array so we can just look them up directly
