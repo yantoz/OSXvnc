@@ -104,6 +104,9 @@
     IBOutlet NSMatrix *initialAuthenticationType;
     IBOutlet NSButton *initialDoneButton;
 
+    // Status Menu
+    IBOutlet NSMenu *statusMenu;
+    
     //int port;
     BOOL systemServerIsConfigured;
 
@@ -188,5 +191,8 @@
 - (IBAction) removeService: sender;
 
 - (IBAction) terminateRequest: sender;
+
+- (IBAction) showStatusWindow: sender;
+- (IBAction) showPreferenceWindow: sender;
 
 @end

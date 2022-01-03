@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4529E98A276A15DA00D386E5 /* OSXvnc_status.png in Resources */ = {isa = PBXBuildFile; fileRef = 4529E989276A15DA00D386E5 /* OSXvnc_status.png */; };
 		9199995B0B1135FF0099EA7A /* getMACAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 919999430B11348E0099EA7A /* getMACAddress.c */; };
 		AB25D81F08686B520065843D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F57BB467027E036F014B5D3F /* Credits.rtf */; };
 		AB25D82008686B520065843D /* Vine Server Release Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AB541C2907A0264F00B63668 /* Vine Server Release Notes.rtf */; };
@@ -140,6 +141,7 @@
 		096B69DC0097995A7F000001 /* OSXvnc.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = OSXvnc.html; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4529E989276A15DA00D386E5 /* OSXvnc_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OSXvnc_status.png; sourceTree = "<group>"; };
 		919999420B11348C0099EA7A /* getMACAddress.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = getMACAddress.h; sourceTree = "<group>"; };
 		919999430B11348E0099EA7A /* getMACAddress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 30; path = getMACAddress.c; sourceTree = "<group>"; };
 		AB25D83708686B520065843D /* VineServer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VineServer-Info.plist"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4529E989276A15DA00D386E5 /* OSXvnc_status.png */,
 				AB3E27F70AF947FB004AF567 /* Vine Server.pdf */,
 				AB541C2907A0264F00B63668 /* Vine Server Release Notes.rtf */,
 				096B69DC0097995A7F000001 /* OSXvnc.html */,
@@ -625,6 +628,7 @@
 				AB25D82108686B520065843D /* Copying.rtf in Resources */,
 				AB25D81F08686B520065843D /* Credits.rtf in Resources */,
 				AB25D82208686B520065843D /* Localizable.strings in Resources */,
+				4529E98A276A15DA00D386E5 /* OSXvnc_status.png in Resources */,
 				AB25D82008686B520065843D /* Vine Server Release Notes.rtf in Resources */,
 				AB25D82608686B520065843D /* OSXvnc in Resources */,
 				ABFC222C0AF08CBA00BCE727 /* VineServer.icns in Resources */,

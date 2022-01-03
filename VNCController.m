@@ -225,6 +225,16 @@ NSMutableArray *localIPAddresses() {
         [NSApp terminate: self];
 }
 
+- (IBAction) showStatusWindow: sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [statusWindow setIsVisible:YES];
+}
+
+- (IBAction)showPreferenceWindow:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [preferenceWindow setIsVisible:YES];
+}
+
 - (void) terminateSheetDidEnd:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void  *)contextInfo {
     if (returnCode == NSAlertAlternateReturn) {
         [sheet orderOut:self];
@@ -497,8 +507,26 @@ NSMutableArray *localIPAddresses() {
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     if (startServerOnLaunchCheckbox.state)// && [self authenticationIsValid])
         [self startServer: self];
-    if (!NSApp.hidden)
-        [statusWindow makeMainWindow];
+    
+    // Set in VineServer-Info.plist | Application is agent (UIElement)
+    if (NSApp.activationPolicy == NSApplicationActivationPolicyAccessory) {
+        
+        // Application is an agent
+        NSStatusItem *statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+        [statusItem setMenu:statusMenu];
+
+        NSImage *statusImage = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"OSXvnc_status" ofType:@"png"]];
+        [statusImage setSize:NSMakeSize(18, 18)];
+        [statusItem setImage:[statusImage retain]];
+        [statusItem setHighlightMode:YES];
+        [NSApp activateIgnoringOtherApps:YES];
+    }
+    else {
+        
+        // Application is not an agent
+        if (!NSApp.hidden)
+            [statusWindow makeMainWindow];
+    }
 }
 
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification {
@@ -1544,6 +1572,8 @@ NSMutableArray *localIPAddresses() {
         launchdDictionary[@"StandardErrorPath"] = logLocation;
         launchdDictionary[@"LimitLoadToSessionType"] = @[@"Aqua",@"LoginWindow"];
 
+        //launchdDictionary[@"LSBackgroundOnly"] = [NSNumber numberWithBool:TRUE];
+        
         // Write to file
         NSString *tempPath = [@"/tmp" stringByAppendingPathComponent:launchdPath.lastPathComponent];
         [launchdDictionary writeToFile:tempPath atomically:NO];

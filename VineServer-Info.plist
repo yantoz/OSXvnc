@@ -36,6 +36,8 @@
 	<string>© __YEAR__ Stefan Weil</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>ReverseHost</key>
