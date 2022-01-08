@@ -516,6 +516,7 @@ NSMutableArray *localIPAddresses() {
         [statusItem setMenu:statusMenu];
 
         NSImage *statusImage = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"OSXvnc_status" ofType:@"png"]];
+        statusImage.template = true;
         [statusImage setSize:NSMakeSize(18, 18)];
         [statusItem setImage:[statusImage retain]];
         [statusItem setHighlightMode:YES];
